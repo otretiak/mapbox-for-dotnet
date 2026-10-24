@@ -408,13 +408,13 @@ namespace MapboxCoreMaps
 	[DisableDefaultCtor]
 	interface MBMMapOptions
 	{
-		// -(instancetype _Nonnull)initWithContextMode:(NSNumber * _Nullable)contextMode constrainMode:(NSNumber * _Nullable)constrainMode viewportMode:(NSNumber * _Nullable)viewportMode orientation:(NSNumber * _Nullable)orientation crossSourceCollisions:(NSNumber * _Nullable)crossSourceCollisions size:(MBMSize * _Nullable)size glyphsRasterizationOptions:(MBMGlyphsRasterizationOptions * _Nullable)glyphsRasterizationOptions __attribute__((swift_private));
-		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:glyphsRasterizationOptions:")]
-		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions);
+		// -(nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode constrainMode:(nullable NSNumber *)constrainMode viewportMode:(nullable NSNumber *)viewportMode orientation:(nullable NSNumber *)orientation crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions size:(nullable MBMSize *)size glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions emissiveColorPrecision:(nullable NSNumber *)emissiveColorPrecision NS_REFINED_FOR_SWIFT;
+		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:glyphsRasterizationOptions:emissiveColorPrecision:")]
+		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions, [NullAllowed] NSNumber emissiveColorPrecision);
 
-		// -(instancetype _Nonnull)initWithContextMode:(NSNumber * _Nullable)contextMode constrainMode:(NSNumber * _Nullable)constrainMode viewportMode:(NSNumber * _Nullable)viewportMode orientation:(NSNumber * _Nullable)orientation crossSourceCollisions:(NSNumber * _Nullable)crossSourceCollisions size:(MBMSize * _Nullable)size pixelRatio:(float)pixelRatio glyphsRasterizationOptions:(MBMGlyphsRasterizationOptions * _Nullable)glyphsRasterizationOptions __attribute__((swift_private));
-		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:pixelRatio:glyphsRasterizationOptions:")]
-		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, float pixelRatio, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions);
+		// -(nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode constrainMode:(nullable NSNumber *)constrainMode viewportMode:(nullable NSNumber *)viewportMode orientation:(nullable NSNumber *)orientation crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions size:(nullable MBMSize *)size pixelRatio:(float)pixelRatio glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions scaleFactor:(float)scaleFactor emissiveColorPrecision:(nullable NSNumber *)emissiveColorPrecision NS_REFINED_FOR_SWIFT;
+		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:pixelRatio:glyphsRasterizationOptions:scaleFactor:emissiveColorPrecision:")]
+		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, float pixelRatio, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions, float scaleFactor, [NullAllowed] NSNumber emissiveColorPrecision);
 
 		// @property (readonly, nonatomic) NS_REFINED_FOR_SWIFT NSNumber * contextMode __attribute__((swift_private));
 		[Export ("contextMode")]
@@ -447,6 +447,14 @@ namespace MapboxCoreMaps
 		// @property (readonly, nonatomic) MBMGlyphsRasterizationOptions * _Nullable glyphsRasterizationOptions;
 		[NullAllowed, Export ("glyphsRasterizationOptions")]
 		MBMGlyphsRasterizationOptions GlyphsRasterizationOptions { get; }
+
+		// @property (nonatomic, readonly) float scaleFactor NS_REFINED_FOR_SWIFT;
+		[Export ("scaleFactor")]
+		float ScaleFactor { get; }
+
+		// @property (nonatomic, readonly, nullable) NSNumber *emissiveColorPrecision NS_REFINED_FOR_SWIFT;
+		[NullAllowed, Export ("emissiveColorPrecision")]
+		NSNumber EmissiveColorPrecision { get; }
 	}
 
 	// @interface MBMCoordinateBoundsZoom : NSObject
@@ -548,10 +556,6 @@ namespace MapboxCoreMaps
 	[DisableDefaultCtor]
 	interface MBMQueriedFeature
 	{
-		// -(instancetype _Nonnull)initWithFeature:(MBXFeature * _Nonnull)feature source:(NSString * _Nonnull)source sourceLayer:(NSString * _Nullable)sourceLayer state:(id _Nonnull)state __attribute__((swift_private));
-		[Export ("initWithFeature:source:sourceLayer:state:")]
-		NativeHandle Constructor (MBXFeature feature, string source, [NullAllowed] string sourceLayer, NSObject state);
-
 		// @property (readonly, nonatomic) NS_REFINED_FOR_SWIFT MBXFeature * feature __attribute__((swift_private));
 		[Export ("feature")]
 		MBXFeature Feature { get; }
@@ -1805,21 +1809,21 @@ namespace MapboxCoreMaps
 	[DisableDefaultCtor]
 	interface MBMCustomGeometrySourceOptions
 	{
-        // - (nonnull instancetype)initWithTileStatusChangedFunction:(nonnull MBMCustomRasterSourceTileStatusChangedCallback)tileStatusChangedFunction;
-		[Export ("initWithTileStatusChangedFunction:")]
-		NativeHandle Constructor (MBMCustomRasterSourceTileStatusChangedCallback tileStatusChangedFunction);
+		// -(nonnull instancetype)initWithFetchTileFunction:(nonnull MBMTileFunctionCallback)fetchTileFunction cancelTileFunction:(nonnull MBMTileFunctionCallback)cancelTileFunction tileOptions:(nonnull MBMTileOptions *)tileOptions;
+		[Export ("initWithFetchTileFunction:cancelTileFunction:tileOptions:")]
+		NativeHandle Constructor (MBMTileFunctionCallback fetchTileFunction, MBMTileFunctionCallback cancelTileFunction, MBMTileOptions tileOptions);
 
-        // - (nonnull instancetype)initWithTileStatusChangedFunction:(nonnull MBMCustomRasterSourceTileStatusChangedCallback)tileStatusChangedFunction
-        //                                           minZoom:(uint8_t)minZoom
-        //                                           maxZoom:(uint8_t)maxZoom
-        //                                          tileSize:(uint16_t)tileSize;
-		// -(instancetype _Nonnull)initWithFetchTileFunction:(MBMTileFunctionCallback _Nonnull)fetchTileFunction cancelTileFunction:(MBMTileFunctionCallback _Nonnull)cancelTileFunction minZoom:(uint8_t)minZoom maxZoom:(uint8_t)maxZoom tileOptions:(MBMTileOptions * _Nonnull)tileOptions;
-		[Export ("initWithTileStatusChangedFunction:minZoom:maxZoom:tileSize:")]
-		NativeHandle Constructor (MBMCustomRasterSourceTileStatusChangedCallback tileStatusChangedFunction, byte minZoom, byte maxZoom, ushort tileSize);
+		// -(nonnull instancetype)initWithFetchTileFunction:(nonnull MBMTileFunctionCallback)fetchTileFunction cancelTileFunction:(nonnull MBMTileFunctionCallback)cancelTileFunction minZoom:(uint8_t)minZoom maxZoom:(uint8_t)maxZoom tileOptions:(nonnull MBMTileOptions *)tileOptions;
+		[Export ("initWithFetchTileFunction:cancelTileFunction:minZoom:maxZoom:tileOptions:")]
+		NativeHandle Constructor (MBMTileFunctionCallback fetchTileFunction, MBMTileFunctionCallback cancelTileFunction, byte minZoom, byte maxZoom, MBMTileOptions tileOptions);
 
-        // @property (nonatomic, readonly, nonnull) MBMCustomRasterSourceTileStatusChangedCallback tileStatusChangedFunction;
-		[Export ("tileStatusChangedFunction")]
-		MBMCustomRasterSourceTileStatusChangedCallback TileStatusChangedFunction { get; }
+		// @property (nonatomic, readonly, nonnull) MBMTileFunctionCallback fetchTileFunction;
+		[Export ("fetchTileFunction")]
+		MBMTileFunctionCallback FetchTileFunction { get; }
+
+		// @property (nonatomic, readonly, nonnull) MBMTileFunctionCallback cancelTileFunction;
+		[Export ("cancelTileFunction")]
+		MBMTileFunctionCallback CancelTileFunction { get; }
 
 		// @property (readonly, nonatomic) uint8_t minZoom;
 		[Export ("minZoom")]
@@ -1829,9 +1833,9 @@ namespace MapboxCoreMaps
 		[Export ("maxZoom")]
 		byte MaxZoom { get; }
 
-		// @property (nonatomic, readonly) uint16_t tileSize;
-		[Export ("tileSize")]
-		ushort TileSize { get; }
+		// @property (nonatomic, readonly, nonnull) MBMTileOptions *tileOptions;
+		[Export ("tileOptions")]
+		MBMTileOptions TileOptions { get; }
 	}
 
 	// @interface MBMCustomRasterSourceOptions : NSObject
@@ -1867,37 +1871,11 @@ namespace MapboxCoreMaps
 		ushort TileSize { get; }
 	}
 
-	// @interface MBMStylePropertyValue : NSObject
-	[BaseType (typeof(NSObject))]
-	[DisableDefaultCtor]
-	interface MBMStylePropertyValue
-	{
-		// -(instancetype _Nonnull)initWithValue:(id _Nonnull)value kind:(MBMStylePropertyValueKind)kind;
-		[Export ("initWithValue:kind:")]
-		NativeHandle Constructor (NSObject value, MBMStylePropertyValueKind kind);
-
-		// @property (readonly, copy, nonatomic) id _Nonnull value;
-		[Export ("value", ArgumentSemantic.Copy)]
-		NSObject Value { get; }
-
-		// @property (readonly, nonatomic) MBMStylePropertyValueKind kind;
-		[Export ("kind")]
-		MBMStylePropertyValueKind Kind { get; }
-	}
-
 	// @interface MBMCustomLayerRenderParameters : NSObject
 	[BaseType (typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MBMCustomLayerRenderParameters
 	{
-		// -(instancetype _Nonnull)initWithWidth:(double)width height:(double)height latitude:(double)latitude longitude:(double)longitude zoom:(double)zoom bearing:(double)bearing pitch:(double)pitch fieldOfView:(double)fieldOfView projectionMatrix:(NSArray<NSNumber *> * _Nonnull)projectionMatrix elevationData:(id<MBMElevationData> _Nullable)elevationData renderToTilesIDs:(NSArray<MBMCanonicalTileID *> * _Nullable)renderToTilesIDs __attribute__((deprecated("This constructor is internal and to be used from within Mapbox SDK only.")));
-		[Export ("initWithWidth:height:latitude:longitude:zoom:bearing:pitch:fieldOfView:projectionMatrix:elevationData:renderToTilesIDs:")]
-		NativeHandle Constructor (double width, double height, double latitude, double longitude, double zoom, double bearing, double pitch, double fieldOfView, NSNumber[] projectionMatrix, [NullAllowed] MBMElevationData elevationData, [NullAllowed] MBMCanonicalTileID[] renderToTilesIDs);
-
-		// -(instancetype _Nonnull)initWithWidth:(double)width height:(double)height latitude:(double)latitude longitude:(double)longitude zoom:(double)zoom bearing:(double)bearing pitch:(double)pitch fieldOfView:(double)fieldOfView projectionMatrix:(NSArray<NSNumber *> * _Nonnull)projectionMatrix elevationData:(id<MBMElevationData> _Nullable)elevationData __attribute__((deprecated("This constructor is deprecated and will be removed.")));
-		[Export ("initWithWidth:height:latitude:longitude:zoom:bearing:pitch:fieldOfView:projectionMatrix:elevationData:")]
-		NativeHandle Constructor (double width, double height, double latitude, double longitude, double zoom, double bearing, double pitch, double fieldOfView, NSNumber[] projectionMatrix, [NullAllowed] MBMElevationData elevationData);
-
 		// @property (readonly, nonatomic) double width;
 		[Export ("width")]
 		double Width { get; }

@@ -100,25 +100,9 @@ namespace MapboxCommon
 		[Export ("initWithLine:")]
 		NativeHandle Constructor (NSValue[] locations);
 
-		// -(instancetype _Nonnull)initWithPolygon:(NSArray<NSArray<NSValue *> *> * _Nonnull)locations;
-		[Static, Export ("initWithPolygon:")]
-		MBXGeometry FromPolygon (NSArray locations);
-
-		// -(instancetype _Nonnull)initWithMultiPoint:(NSArray<NSValue *> * _Nonnull)locations;
-		[Static, Export ("initWithMultiPoint:")]
-		MBXGeometry FromMultiPoint (NSValue[] locations);
-
-		// -(instancetype _Nonnull)initWithMultiLine:(NSArray<NSArray<NSValue *> *> * _Nonnull)locations;
-		[Static, Export ("initWithMultiLine:")]
-		MBXGeometry FromMultiLine (NSArray locations);
-
-		// -(instancetype _Nonnull)initWithMultiPolygon:(NSArray<NSArray<NSArray<NSValue *> *> *> * _Nonnull)locations;
-		[Export ("initWithMultiPolygon:")]
-		MBXGeometry FromMultiPolygon (NSArray locations);
-
-		// -(instancetype _Nonnull)initWithGeometryCollection:(NSArray<MBXGeometry *> * _Nonnull)geometries;
-		[Export ("initWithGeometryCollection:")]
-		MBXGeometry FromGeometryCollection (MBXGeometry[] geometries);
+		// initWithPolygon:, initWithMultiPoint:, initWithMultiLine:, initWithMultiPolygon: and
+		// initWithGeometryCollection: are instance initializers whose C# signatures collide; they are
+		// exposed as static From* factories (alloc + init) in MBXGeometry.cs.
 
 		// -(NSValue * _Nullable)extractLocations;
 		[NullAllowed, Export ("extractLocations")]
@@ -1150,18 +1134,13 @@ namespace MapboxCommon
 	[DisableDefaultCtor]
 	interface MBXDataRef
 	{
-		// @property (readonly, copy, nonatomic) NSData * _Nonnull data;
-		[Export ("data", ArgumentSemantic.Copy)]
-		NSData Data { get; }
+		// @property (nonatomic, strong, nonnull) NSData *data;
+		[Export ("data", ArgumentSemantic.Strong)]
+		NSData Data { get; set; }
 
-		// -(instancetype _Nonnull)initWithData:(NSData * _Nonnull)data __attribute__((objc_designated_initializer));
+		// -(instancetype _Nonnull)initWithData:(NSData * _Nonnull)data;
 		[Export ("initWithData:")]
-		[DesignatedInitializer]
 		NativeHandle Constructor (NSData data);
 
-		// -(instancetype _Nonnull)initWithBytesNoCopy:(void * _Nonnull)bytesNoCopy count:(NSInteger)count deallocator:(void (^ _Nonnull)(void * _Nonnull, NSInteger))deallocator __attribute__((objc_designated_initializer));
-		[Export ("initWithBytesNoCopy:count:deallocator:")]
-		[DesignatedInitializer]
-		unsafe NativeHandle Constructor (NSObject bytesNoCopy, nint count, Action<NSObject, nint> deallocator);
 	}
 }

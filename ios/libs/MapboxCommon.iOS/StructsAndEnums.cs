@@ -167,6 +167,7 @@ namespace MapboxCommon
 		Search,
 		Adas,
         NavigationHD,
+        EvChargingStations,
 	}
 
 	[Native]
@@ -177,6 +178,7 @@ namespace MapboxCommon
 		TilesetDescriptor,
 		DiskFull,
 		Other,
-		TileCountExceeded
+		TileCountExceeded,
+		PartialLoad
 	}
 }

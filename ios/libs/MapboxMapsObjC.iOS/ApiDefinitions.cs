@@ -125,7 +125,7 @@ namespace MapboxMapsObjC
     interface TMBViewportOptions
     {
         // @property (nonatomic) BOOL transitionsToIdleUponUserInteraction;
-        [Export("options")]
+        [Export("transitionsToIdleUponUserInteraction")]
         bool TransitionsToIdleUponUserInteraction { get; set; }
 
         // - (nonnull instancetype)initWithTransitionsToIdleUponUserInteraction:(BOOL)transitionsToIdleUponUserInteraction OBJC_DESIGNATED_INITIALIZER;
@@ -5485,6 +5485,10 @@ namespace MapboxMapsObjC
         // -(void)updateGeoJSONSourceWithId:(NSString * _Nonnull)id data:(TMBGeoJSONSourceData * _Nonnull)data dataId:(NSString * _Nullable)dataId;
         [Export("updateGeoJSONSourceWithId:data:dataId:")]
         void UpdateGeoJSONSourceWithId(string id, TMBGeoJSONSourceData data, [NullAllowed] string dataId);
+
+        // -(void)updateGeoJSONSourceWithId:(NSString * _Nonnull)id geoJSON:(NSString * _Nonnull)geoJSON dataId:(NSString * _Nullable)dataId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
+        [Export("updateGeoJSONSourceWithId:geoJSON:dataId:completion:")]
+        void UpdateGeoJSONSourceWithId(string id, string geoJSON, [NullAllowed] string dataId, [NullAllowed] Action<NSError> completion);
 
         // -(void)addGeoJSONSourceFeaturesForSourceId:(NSString * _Nonnull)sourceId features:(NSArray<MBXFeature *> * _Nonnull)features dataId:(NSString * _Nullable)dataId;
         [Export("addGeoJSONSourceFeaturesForSourceId:features:dataId:")]

@@ -88,7 +88,9 @@ namespace MapboxCoreMaps
 		TerrainWireframe,
 		Layers2DWireframe,
 		Layers3DWireframe,
-		Light
+		Light,
+		ElevationID,
+		Occlusion
 	}
 
 	[Native]
@@ -288,12 +290,4 @@ namespace MapboxCoreMaps
 		ReadAndUpdate
 	}
 
-	[Native]
-	public enum MBMStylePropertyValueKind : long
-	{
-		Undefined,
-		Constant,
-		Expression,
-		Transition
-	}
 }

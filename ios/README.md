@@ -9,8 +9,8 @@ For an app that renders Mapbox maps, install the Maps package and the Objective-
 bridge package:
 
 ```bash
-dotnet add package Bindings.Mapbox.iOS --version 11.23.0.2
-dotnet add package Bindings.Mapbox.iOS.MapsObjC --version 11.23.0.2
+dotnet add package Bindings.Mapbox.iOS --version 11.33.0.1-unifly
+dotnet add package Bindings.Mapbox.iOS.MapsObjC --version 11.33.0.1-unifly
 ```
 
 `Bindings.Mapbox.iOS` brings in the Common, CoreMaps, and Turf binding packages.
