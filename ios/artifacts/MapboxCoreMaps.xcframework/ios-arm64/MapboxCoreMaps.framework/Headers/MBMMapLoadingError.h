@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMMapLoadingErrorType.h>
 
 @class MBMCanonicalTileID;
+typedef NS_ENUM(NSInteger, MBMMapLoadingErrorType);
 
 /**
  * Describes an error that has occurred while loading the `map`. The `type` property

@@ -1,10 +1,10 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMSourceDataLoadedType.h>
 
 @class MBMCanonicalTileID;
 @class MBMEventTimeInterval;
+typedef NS_ENUM(NSInteger, MBMSourceDataLoadedType);
 
 /**
  * The `SourceDataLoaded` event is emitted when source data is loaded.

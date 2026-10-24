@@ -1,8 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXAccuracyAuthorization.h>
-#import <MapboxCommon/MBXPermissionStatus.h>
+
+typedef NS_ENUM(NSInteger, MBXAccuracyAuthorization);
+typedef NS_ENUM(NSInteger, MBXPermissionStatus);
 
 /** Observers for getting updates from LocationService. */
 NS_SWIFT_NAME(LocationServiceObserver)

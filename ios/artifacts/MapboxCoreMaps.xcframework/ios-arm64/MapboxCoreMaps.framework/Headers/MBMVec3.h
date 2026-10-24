@@ -27,4 +27,6 @@ __attribute__((visibility ("default")))
 @property (nonatomic, readonly) double z;
 
 
+- (BOOL)isEqualToVec3:(nonnull MBMVec3 *)other;
+
 @end

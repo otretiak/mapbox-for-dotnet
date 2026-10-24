@@ -1,11 +1,11 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMRequestDataSourceType.h>
 
 @class MBMEventTimeInterval;
 @class MBMRequestInfo;
 @class MBMResponseInfo;
+typedef NS_ENUM(NSInteger, MBMRequestDataSourceType);
 
 /** The `ResourceRequest` event allows the application to observe resource requests made by a `map` or `map snapshotter` object. */
 NS_SWIFT_NAME(ResourceRequest)

@@ -31,4 +31,6 @@ __attribute__((visibility ("default")))
 @property (nonatomic, readonly) double w;
 
 
+- (BOOL)isEqualToVec4:(nonnull MBMVec4 *)other;
+
 @end

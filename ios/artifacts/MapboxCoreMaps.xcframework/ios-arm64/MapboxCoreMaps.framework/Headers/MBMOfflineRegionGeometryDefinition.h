@@ -1,8 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMGlyphsRasterizationMode.h>
 @class MBXGeometry;
+
+typedef NS_ENUM(NSInteger, MBMGlyphsRasterizationMode);
 
 /**
  * An offline region definition is a geographic region defined by a style URL,

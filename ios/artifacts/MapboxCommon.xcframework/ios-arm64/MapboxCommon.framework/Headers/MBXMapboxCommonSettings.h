@@ -9,7 +9,12 @@ __attribute__((visibility ("default")))
 
     /**
      * The key that defines a language to be used by Mapbox SDKs.
-     * The value of the key must be a string that is a valid IETF BCP-47 language tag (eg. "en-US").
+     *
+     * The value must be a string containing a valid IETF BCP-47 language tag (e.g., "en-US"),
+     * or an array of such strings for fallback language chains.
+     *
+     * When using an array, languages are prioritized in order: the first value is preferred,
+     * and subsequent values serve as fallbacks when content is unavailable in higher-priority languages.
      */
     @property (nonatomic, class, readonly) NSString * Language;
     /**

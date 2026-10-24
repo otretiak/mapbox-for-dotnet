@@ -7,7 +7,7 @@
  * Boxed version of CLLocationCoordinate2D
  */
 NS_SWIFT_NAME(Coordinate2D)
-__attribute__((visibility ("default")))
+__attribute__((visibility("default")))
 @interface MBXCoordinate2D : NSObject
 @property(nonatomic, readonly, assign) CLLocationCoordinate2D value;
 

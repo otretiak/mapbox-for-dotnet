@@ -15,7 +15,9 @@ typedef NS_ENUM(NSInteger, MBXTileDataDomain)
     /** Data for ADAS. */
     MBXTileDataDomainAdas,
     /** Data for Navigation HD. */
-    MBXTileDataDomainNavigationHD
+    MBXTileDataDomainNavigationHD,
+    /** Data for EV Planner / EV Charging Stations. */
+    MBXTileDataDomainEvChargingStations
 } NS_SWIFT_NAME(TileDataDomain);
 
 NSString* MBXTileDataDomainToString(MBXTileDataDomain tile_data_domain);

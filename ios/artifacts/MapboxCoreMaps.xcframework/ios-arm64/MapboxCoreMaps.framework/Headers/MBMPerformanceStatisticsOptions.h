@@ -2,6 +2,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, MBMPerformanceSamplerOptions);
+
 /**
  * Options for the following statistics collection behaviors:
  * <ul>

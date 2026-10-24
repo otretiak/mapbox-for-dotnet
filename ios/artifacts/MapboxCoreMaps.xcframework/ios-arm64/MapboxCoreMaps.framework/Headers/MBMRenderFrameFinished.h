@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMRenderModeType.h>
 
 @class MBMEventTimeInterval;
+typedef NS_ENUM(NSInteger, MBMRenderModeType);
 
 /**
  * The `map` finished rendering a frame.

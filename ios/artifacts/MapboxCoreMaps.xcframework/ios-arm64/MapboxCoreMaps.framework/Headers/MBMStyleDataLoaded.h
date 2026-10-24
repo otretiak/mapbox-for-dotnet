@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMStyleDataLoadedType.h>
 
 @class MBMEventTimeInterval;
+typedef NS_ENUM(NSInteger, MBMStyleDataLoadedType);
 
 /**
  * The style data has been loaded. The event will be emitted once for each `StyleDataLoadedType`

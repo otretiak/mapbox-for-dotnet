@@ -1,18 +1,22 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXTileDataDomain.h>
 #import <MapboxCommon/MBXTileRegionEstimateProgressCallback.h>
 #import <MapboxCommon/MBXTileRegionLoadProgressCallback.h>
+#import <MapboxCommon/MBXTileStoreImportProgressCallback.h>
+@class MBXExpected<__covariant Value, __covariant Error>;
 
 @class MBXResourceDescription;
 @class MBXResourceLoadOptions;
+@class MBXTileRegionApplyUpdateOptions;
 @class MBXTileRegionEstimateOptions;
 @class MBXTileRegionLoadOptions;
 @class MBXTileStoreAmbientCacheFilterOptions;
+@class MBXTileStoreImportOptions;
 @class MBXTilesetDescriptor;
 @protocol MBXCancelable;
 @protocol MBXTileStoreObserver;
+typedef NS_ENUM(NSInteger, MBXTileDataDomain);
 
 /**
  * TileStore manages downloads and storage for requests to tile-related API endpoints, enforcing a disk usage
@@ -30,7 +34,10 @@ __attribute__((visibility ("default")))
 + (nonnull instancetype)new NS_UNAVAILABLE;
 
 /**
- * Creates a TileStore instance for the given storage path.
+ * This method is deprecated. Use create() instead. If you need to create a TileStore with a non-default path,
+ * configure the path with setRootPath(path) before TileStore creation.
+ *
+ * Creates a TileStore instance for the given storage path. Configures path to be used by default.
  *
  * The returned instance exists as long as it is retained by the client.
  * If the tile store instance already exists for the given path this method will return it without creating
@@ -41,12 +48,19 @@ __attribute__((visibility ("default")))
  * On Android, please exclude the storage path in your Manifest.
  * Please refer to the [Android Documentation](https://developer.android.com/guide/topics/data/autobackup.html#IncludingFiles) for detailed information.
  *
+ * If TileStore location is not set already by setRootPath, it will be set to created TileStore location
+ * and used by create() method.
+ *
  * @param  path The path on disk where tiles and metadata will be stored
  * @return Returns a TileStore instance.
  */
-+ (nonnull MBXTileStore *)createForPath:(nonnull NSString *)path __attribute((ns_returns_retained)) NS_REFINED_FOR_SWIFT;
++ (nonnull MBXTileStore *)createForPath:(nonnull NSString *)path __attribute((ns_returns_retained)) NS_REFINED_FOR_SWIFT __attribute__((deprecated));
 /**
- * Creates a TileStore instance at the default location.
+ * Creates a TileStore instance at the default location. Default location defined as following: if location was explicitly set with
+ * setRootPath it will be used. If locatuon was not set explicitly but TileStore was already initialized by the app at some path
+ * this location will be used. If TileStore was not initialized by application before and no path was explicitly
+ * configured, creates a new directory inside application data path.
+ * If TileStore location is not set already by setRootPath, it will be set to created TileStore location.
  *
  * If the tile store instance already exists for the default location this method will return it without creating
  * a new instance, thus making sure that there is only one tile store instance for a path at a time.
@@ -70,6 +84,7 @@ __attribute__((visibility ("default")))
  * eviction might be deferred. All pending loading operations for the tile region
  * with the given id will fail with Canceled error.
  * When a tile region is removed associated resources will move to the ambient cache.
+ * If you need to remove the resources immediately @see clearAmbientCache.
  *
  * @param id The tile region identifier.
  */

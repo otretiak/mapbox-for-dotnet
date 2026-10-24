@@ -1,9 +1,10 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMRequestLoadingMethodType.h>
-#import <MapboxCoreMaps/MBMRequestPriorityType.h>
-#import <MapboxCoreMaps/MBMRequestResourceType.h>
+
+typedef NS_ENUM(NSInteger, MBMRequestLoadingMethodType);
+typedef NS_ENUM(NSInteger, MBMRequestPriorityType);
+typedef NS_ENUM(NSInteger, MBMRequestResourceType);
 
 /** The structure defines the information about the resource request. */
 NS_SWIFT_NAME(RequestInfo)

@@ -1,7 +1,8 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMGlyphsRasterizationMode.h>
+
+typedef NS_ENUM(NSInteger, MBMGlyphsRasterizationMode);
 
 /** Describes the glyphs rasterization option values. */
 NS_SWIFT_SENDABLE

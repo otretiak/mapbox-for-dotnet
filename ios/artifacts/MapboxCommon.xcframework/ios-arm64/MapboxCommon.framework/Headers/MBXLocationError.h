@@ -1,7 +1,8 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXLocationErrorCode.h>
+
+typedef NS_ENUM(NSInteger, MBXLocationErrorCode);
 
 /** Error code with brief explanation. */
 NS_SWIFT_NAME(LocationError)

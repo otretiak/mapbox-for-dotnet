@@ -6,16 +6,18 @@
 @class MBXGeometry;
 
 NS_SWIFT_NAME(Feature)
-__attribute__((visibility ("default")))
-@interface MBXFeature: NSObject
+__attribute__((visibility("default")))
+@interface MBXFeature : NSObject<NSCopying>
 
 @property (readonly, retain, nonnull) NSObject *identifier;
 @property (readonly, retain, nonnull) MBXGeometry *geometry;
-@property(readonly, retain, nonnull) NSDictionary<NSString *, NSObject *> *properties;
+@property (readonly, retain, nonnull) NSDictionary<NSString *, NSObject *> *properties;
 
 - (nonnull instancetype)initWithIdentifier:(nonnull NSObject *)identifier
                                   geometry:(nonnull MBXGeometry *)geometry
                                 properties:(nonnull NSDictionary<NSString *, NSObject *> *)properties;
+
+- (BOOL)isEqualToFeature:(nonnull MBXFeature *)other;
 
 // This class provides custom init which should be called
 - (nonnull instancetype)init NS_UNAVAILABLE;

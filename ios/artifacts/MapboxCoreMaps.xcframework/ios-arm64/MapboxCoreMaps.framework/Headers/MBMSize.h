@@ -3,7 +3,7 @@
 #import <Foundation/Foundation.h>
 
 /** Size type. */
-NS_SWIFT_NAME(Size)
+NS_SWIFT_NAME(MBXSize)
 __attribute__((visibility ("default")))
 @interface MBMSize : NSObject
 

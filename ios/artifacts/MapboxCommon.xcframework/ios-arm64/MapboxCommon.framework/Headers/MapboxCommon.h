@@ -1,8 +1,10 @@
 #import <MapboxCommon/MBXCoordinate2D.h>
+#import <MapboxCommon/MBXDataRef.h>
 #import <MapboxCommon/MBXExceptionHandler.h>
 #import <MapboxCommon/MBXFeature.h>
 #import <MapboxCommon/MBXGeometry.h>
 #import <MapboxCommon/MBXLocation+Additions.h>
+#import <MapboxCommon/MBXTileVariant.h>
 #import <MapboxCommon/MBXTilesetDescriptor.h>
 #import <MapboxCommon/MapboxCancelable.h>
 #import <MapboxCommon/MapboxHttp.h>
@@ -10,8 +12,12 @@
 #import <MapboxCommon/MapboxLogging.h>
 #import <MapboxCommon/MapboxMapboxOptions.h>
 #import <MapboxCommon/MapboxOfflineSwitch.h>
+#import <MapboxCommon/MapboxPersistentLogConfiguration.h>
 #import <MapboxCommon/MapboxSdkInformation.h>
 #import <MapboxCommon/MapboxSettingsService.h>
 #import <MapboxCommon/MapboxTileStore.h>
+#import <MapboxCommon/MapboxTileStoreFilter.h>
+#import <MapboxCommon/MapboxTileStoreImport.h>
 #import <MapboxCommon/MapboxTileStoreUtilities.h>
+#import <MapboxCommon/MapboxTilesetDescriptor.h>
 #import <MapboxCommon/MapboxValue.h>

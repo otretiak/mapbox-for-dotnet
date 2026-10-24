@@ -1,10 +1,10 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMCustomRasterSourceTileStatus.h>
 
 @class MBMCanonicalTileID;
 @class MBMCustomLayerRenderParameters;
+typedef NS_ENUM(NSInteger, MBMCustomRasterSourceTileStatus);
 
 /**
  * Interface for the direct rendering into the custom raster tiles.

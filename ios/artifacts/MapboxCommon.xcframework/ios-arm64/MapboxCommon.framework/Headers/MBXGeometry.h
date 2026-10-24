@@ -16,11 +16,11 @@ typedef enum {
 } MBXGeometryType NS_SWIFT_NAME(GeometryType);
 
 NS_SWIFT_NAME(Geometry)
-__attribute__((visibility ("default")))
-@interface MBXGeometry: NSObject
+__attribute__((visibility("default")))
+@interface MBXGeometry : NSObject<NSCopying>
 
-@property (readonly, assign) MBXGeometryType geometryType;
-@property (readonly, assign, nonnull) void *geometry;
+@property(readonly, assign) MBXGeometryType geometryType;
+@property(readonly, assign, nonnull) void *geometry;
 
 - (instancetype _Nonnull )initWithPoint:(NSValue* _Nonnull )location;
 - (instancetype _Nonnull )initWithLine:(NSArray<NSValue*>* _Nonnull )locations;
@@ -30,11 +30,13 @@ __attribute__((visibility ("default")))
 - (instancetype _Nonnull )initWithMultiPolygon:(NSArray<NSArray<NSArray<NSValue*> *> *> * _Nonnull )locations;
 - (instancetype _Nonnull )initWithGeometryCollection:(NSArray<MBXGeometry*> *_Nonnull)geometries;
 
--(nullable NSValue* )extractLocations;
--(nullable NSArray<NSValue*>* )extractLocationsArray;
--(nullable NSArray<NSArray<NSValue*> *> *)extractLocations2DArray;
--(nullable NSArray<NSArray<NSArray<NSValue*> *> *> *)extractLocations3DArray;
--(nullable NSArray<MBXGeometry*> *)extractGeometriesArray;
+- (BOOL)isEqualToGeometry:(nonnull MBXGeometry *)other;
+
+- (nullable NSValue *)extractLocations;
+- (nullable NSArray<NSValue *> *)extractLocationsArray;
+- (nullable NSArray<NSArray<NSValue *> *> *)extractLocations2DArray;
+- (nullable NSArray<NSArray<NSArray<NSValue *> *> *> *)extractLocations3DArray;
+- (nullable NSArray<MBXGeometry *> *)extractGeometriesArray;
 
 @end
 

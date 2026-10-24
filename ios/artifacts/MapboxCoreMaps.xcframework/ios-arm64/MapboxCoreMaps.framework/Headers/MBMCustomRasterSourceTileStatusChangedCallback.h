@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMCustomRasterSourceTileStatus.h>
 
 @class MBMCanonicalTileID;
+typedef NS_ENUM(NSInteger, MBMCustomRasterSourceTileStatus);
 
 /**
  * Callback for changing a CustomRasterSource tile status.

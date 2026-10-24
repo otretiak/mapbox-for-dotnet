@@ -3,6 +3,7 @@
 #import <Foundation/Foundation.h>
 
 /** TileRegion represents an identifiable geographic tile region with metadata */
+NS_SWIFT_SENDABLE
 NS_SWIFT_NAME(TileRegion)
 __attribute__((visibility ("default")))
 @interface MBXTileRegion : NSObject

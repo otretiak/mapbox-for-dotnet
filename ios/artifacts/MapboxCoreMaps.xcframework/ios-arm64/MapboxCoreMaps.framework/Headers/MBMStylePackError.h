@@ -2,6 +2,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, MBMStylePackErrorType);
+
 /** Describes a style package load request error. */
 NS_SWIFT_NAME(StylePackError)
 __attribute__((visibility ("default")))

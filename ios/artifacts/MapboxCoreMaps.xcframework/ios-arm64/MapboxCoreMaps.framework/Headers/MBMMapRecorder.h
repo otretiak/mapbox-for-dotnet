@@ -1,6 +1,7 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
+#import <MapboxCoreMaps/MBMPlaybackFinished.h>
 @class MBXDataRef;
 @class MBXExpected<__covariant Value, __covariant Error>;
 

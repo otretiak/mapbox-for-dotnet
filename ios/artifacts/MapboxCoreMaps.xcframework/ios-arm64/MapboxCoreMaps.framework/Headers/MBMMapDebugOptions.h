@@ -41,5 +41,9 @@ typedef NS_ENUM(NSInteger, MBMMapDebugOptions)
     /** Show a wireframe for 3d layers. Currently supported for GL backend only. */
     MBMMapDebugOptionsLayers3DWireframe,
     /** Each tile shows its local lighting conditions in the upper-left corner. (If `lights` properties are used, otherwise they show zero.) */
-    MBMMapDebugOptionsLight
+    MBMMapDebugOptionsLight,
+    /** Display pseudo-random colors on elevated map elements based on their elevation IDs. */
+    MBMMapDebugOptionsElevationID,
+    /** Visualize symbol occlusion query results against terrain and 3D geometry. */
+    MBMMapDebugOptionsOcclusion
 } NS_SWIFT_NAME(MapDebugOptions);

@@ -3,6 +3,7 @@
 #import <Foundation/Foundation.h>
 
 /** The result of tile region estim */
+NS_SWIFT_SENDABLE
 NS_SWIFT_NAME(TileRegionEstimateResult)
 __attribute__((visibility ("default")))
 @interface MBXTileRegionEstimateResult : NSObject

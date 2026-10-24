@@ -2,11 +2,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import <MapboxCommon/MBXNetworkRestriction.h>
 @class MBXCoordinate2D;
 @class MBXGeometry;
 
 @class MBXTilesetDescriptor;
+typedef NS_ENUM(NSInteger, MBXNetworkRestriction);
 
 /** Describes the tile region load option values. */
 NS_SWIFT_NAME(TileRegionLoadOptions)
@@ -85,8 +85,6 @@ __attribute__((visibility ("default")))
 /**
  * Starts loading the tile region at the given location and then proceeds to tiles that are further away
  * from it.
- *
- * Note that this functionality is not currently implemented.
  */
 @property (nonatomic, readonly, nullable) MBXCoordinate2D *startLocation NS_REFINED_FOR_SWIFT;
 

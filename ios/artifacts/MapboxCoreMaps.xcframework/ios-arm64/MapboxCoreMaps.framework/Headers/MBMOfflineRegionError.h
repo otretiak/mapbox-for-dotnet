@@ -1,7 +1,8 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMOfflineRegionErrorType.h>
+
+__attribute__((deprecated)) typedef NS_ENUM(NSInteger, MBMOfflineRegionErrorType);
 
 /** Describes an offline request response error. */
 NS_SWIFT_NAME(OfflineRegionError)

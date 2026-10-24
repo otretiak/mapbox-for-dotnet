@@ -3,4 +3,5 @@
 #import "MBXSettingsServiceStorageType.h"
 #import "MBXSettingsService.h"
 #import "MBXSettingsServiceFactory.h"
+#import "MBXCombinedSettings.h"
 #import "MBXMapboxCommonSettings.h"

@@ -9,6 +9,7 @@
  * been estimated and the total number of resources as well as a partial result with the
  * current estimate, calculated using the data available at the moment.
  */
+NS_SWIFT_SENDABLE
 NS_SWIFT_NAME(TileRegionEstimateProgress)
 __attribute__((visibility ("default")))
 @interface MBXTileRegionEstimateProgress : NSObject

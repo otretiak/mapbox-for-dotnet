@@ -11,8 +11,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <_NativeVersion>4.0.0</_NativeVersion>
-    <_NugetRevision>2</_NugetRevision>
-    <_NugetSuffix></_NugetSuffix>
+    <_NugetRevision>1</_NugetRevision>
+    <_NugetSuffix>-unifly</_NugetSuffix>
     <_NugetVersion>$(_NativeVersion).$(_NugetRevision)$(_NugetSuffix)</_NugetVersion>
   </PropertyGroup>
   <PropertyGroup>

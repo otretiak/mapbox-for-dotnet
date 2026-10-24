@@ -1,7 +1,8 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXTileRegionErrorType.h>
+
+typedef NS_ENUM(NSInteger, MBXTileRegionErrorType);
 
 /** Describes a tile region load request error. */
 NS_SWIFT_NAME(TileRegionError)

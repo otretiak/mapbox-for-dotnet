@@ -1,11 +1,11 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCoreMaps/MBMOfflineRegionDownloadState.h>
 
 @class MBMOfflineRegionGeometryDefinition;
 @class MBMOfflineRegionTilePyramidDefinition;
 @protocol MBMOfflineRegionObserver;
+__attribute__((deprecated)) typedef NS_ENUM(NSInteger, MBMOfflineRegionDownloadState);
 
 /** An offline region represents an identifiable geographic region with optional metadata. */
 NS_SWIFT_NAME(OfflineRegion)

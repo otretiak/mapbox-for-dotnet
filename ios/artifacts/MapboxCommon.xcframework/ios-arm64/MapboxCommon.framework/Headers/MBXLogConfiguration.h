@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXLoggingLevel.h>
 
 @protocol MBXLogWriterBackend;
+typedef NS_ENUM(NSInteger, MBXLoggingLevel);
 
 /** Class that allows to configure Mapbox SDKs logging per application. */
 NS_SWIFT_NAME(LogConfiguration)

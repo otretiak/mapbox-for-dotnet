@@ -15,6 +15,18 @@ __attribute__((visibility ("default")))
      */
     @property (nonatomic, class, readonly) NSString * DiskQuota;
     /**
+     * Sets the maximum amount of ambient cache bytes TileStore will store before an eviction gets triggered. If a tile
+     * store request value causes the quota to be exceed, data will be evicted to enforce the quota (and the request
+     * will succeed). Accepts a number of bytes, or null for resetting to the default value. Default is 1GB.
+     *
+     * The ambient cache is all the content stored in TileStore which is not attached to a specific context (e.g. a tile
+     * region) and as such it doesn't need to be persisted.
+     *
+     * This is independent of the global disk quota and eviction threshold, and it is meant to prevent unbounded growth
+     * of the ambient cache.
+     */
+    @property (nonatomic, class, readonly) NSString * AmbientCacheEvictionQuota;
+    /**
      * Sets the base URL to use for requests to the Mapbox API. Defaults to "https://api.mapbox.com".
      * Accepts a string, or null for resetting to the default value.
      */

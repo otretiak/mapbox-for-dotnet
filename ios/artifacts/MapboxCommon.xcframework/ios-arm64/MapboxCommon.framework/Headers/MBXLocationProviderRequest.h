@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXAccuracyLevel.h>
 
 @class MBXIntervalSettings;
+typedef NS_ENUM(NSInteger, MBXAccuracyLevel);
 
 /** Data model that contains parameters for location requests. */
 NS_SWIFT_NAME(LocationProviderRequest)

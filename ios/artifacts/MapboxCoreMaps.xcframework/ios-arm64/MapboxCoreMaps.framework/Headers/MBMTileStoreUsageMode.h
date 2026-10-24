@@ -37,6 +37,6 @@ typedef NS_ENUM(NSInteger, MBMTileStoreUsageMode)
      * the disk cache won’t be used as long as the up-to-date tile pack exists in the cache.
      */
     MBMTileStoreUsageModeReadAndUpdate
-} NS_SWIFT_NAME(TileStoreUsageMode);
+} NS_SWIFT_NAME(TileStoreUsageMode) __attribute__((deprecated));
 
-NSString* MBMTileStoreUsageModeToString(MBMTileStoreUsageMode tile_store_usage_mode);
+NSString* MBMTileStoreUsageModeToString(MBMTileStoreUsageMode tile_store_usage_mode) __attribute__((deprecated));

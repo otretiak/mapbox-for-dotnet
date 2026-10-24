@@ -1,9 +1,9 @@
 // This file is generated and will be overwritten automatically.
 
 #import <Foundation/Foundation.h>
-#import <MapboxCommon/MBXSettingsServiceStorageType.h>
 
 @class MBXSettingsService;
+typedef NS_ENUM(NSInteger, MBXSettingsServiceStorageType);
 
 /** Factory that allows to create settings service instance. */
 NS_SWIFT_NAME(SettingsServiceFactory)
