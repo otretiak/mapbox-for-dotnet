@@ -50,7 +50,7 @@ if [[ -f "$artifact_props_path" ]]; then
     export BindingArtifactPropsPath="$artifact_props_path"
 fi
 
-if ! dotnet workload list | rg -q '^android\s'; then
+if ! dotnet workload list | grep -Eq '^android\s'; then
     echo "Installing Android workload"
     dotnet workload install android
 fi
