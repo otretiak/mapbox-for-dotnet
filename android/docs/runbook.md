@@ -19,7 +19,7 @@ MAPBOX_DOWNLOADS_TOKEN=your_token_here
 Current checked-in root:
 
 ```text
-com.mapbox.maps:android-ndk27:11.23.0
+com.mapbox.maps:android-ndk27:11.33.0
 ```
 
 This is the repository's current Android binding root. Check the upstream
@@ -29,6 +29,11 @@ NuGet package versions should use the native artifact version plus one package
 revision component. For example, the `11.23.0` Android SDK packages are
 published as `11.23.0.1`, and binding-only maintenance updates can increment
 only the final component.
+
+Fork note (unifly/11.33): the per-version `<version>.json` files for the 11.33 artifacts carry
+`"nugetVersion": "<native>.1-unifly"`, so the packages are prereleases and cannot collide with a
+future upstream release. `bind.sh` uses `grep -E` instead of `rg`. The final `NugetTask` of `bind.sh`
+fails with "Inadequate permissions"; run restore, build and pack manually afterwards.
 
 Update `.github/workflows/mapbox.yml` first so the workflow input matches the version you are preparing.
 
