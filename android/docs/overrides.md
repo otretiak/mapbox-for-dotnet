@@ -56,6 +56,9 @@ This is the largest override surface in the repo.
   Disambiguates generated typed-featureset methods.
 - `Additions/Additions.cs`
   Adds listener adapters, convenience extension methods, and Parcelable creator fixes.
+  Each `Standard*` typed-featureset class (Buildings, Poi, PlaceLabels, LandmarkIcons,
+  IndoorLabels as of 11.33) needs an override forwarding the abstract
+  `GetFeatureState`/`GetFeaturesetFeature` to the `...X` renamed covariant methods.
 
 ### `src/android/com.mapbox.maps/android-core-ndk27`
 

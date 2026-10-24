@@ -317,4 +317,11 @@ namespace Com.Mapbox.Maps.Interactions.Standard.Generated
         public override unsafe global::Java.Lang.Object GetFeatureState(global::Com.Mapbox.Bindgen.Value rawState)
             => GetFeatureStateX(rawState);
     }
+    partial class StandardIndoorLabels
+    {
+        public override unsafe global::Java.Lang.Object GetFeaturesetFeature(global::Com.Mapbox.Geojson.Feature feature, string? featureNamespace, global::Com.Mapbox.Bindgen.Value rawState)
+            => GetFeaturesetFeatureX(feature, featureNamespace, rawState);
+        public override unsafe global::Java.Lang.Object GetFeatureState(global::Com.Mapbox.Bindgen.Value rawState)
+            => GetFeatureStateX(rawState);
+    }
 }
