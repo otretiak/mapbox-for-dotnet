@@ -4,6 +4,6 @@
 
 @class MBXHttpResponse;
 
-/** Callback used to report the result of an HTTP request. */
+/** Callback which is used to report result of HTTP request. */
 NS_SWIFT_NAME(HttpResponseCallback)
 typedef void (^MBXHttpResponseCallback)(MBXHttpResponse * _Nonnull response); // NOLINT(modernize-use-using)

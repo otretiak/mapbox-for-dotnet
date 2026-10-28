@@ -4,7 +4,6 @@
 #import "MBMStyleObjectInfo.h"
 #import "MBMTransitionOptions.h"
 #import "MBMCanonicalTileID.h"
-#import "MBMOverscaledTileID.h"
 #import "MBMTileOptions.h"
 #import "MBMCustomGeometrySourceOptions.h"
 #import "MBMCustomRasterSourceOptions.h"

@@ -1134,12 +1134,13 @@ namespace MapboxCommon
 	[DisableDefaultCtor]
 	interface MBXDataRef
 	{
-		// @property (nonatomic, strong, nonnull) NSData *data;
-		[Export ("data", ArgumentSemantic.Strong)]
-		NSData Data { get; set; }
+		// @property (readonly, copy, nonatomic) NSData * _Nonnull data;
+		[Export ("data", ArgumentSemantic.Copy)]
+		NSData Data { get; }
 
-		// -(instancetype _Nonnull)initWithData:(NSData * _Nonnull)data;
+		// -(instancetype _Nonnull)initWithData:(NSData * _Nonnull)data __attribute__((objc_designated_initializer));
 		[Export ("initWithData:")]
+		[DesignatedInitializer]
 		NativeHandle Constructor (NSData data);
 
 	}

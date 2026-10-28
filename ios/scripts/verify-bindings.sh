@@ -9,6 +9,7 @@ HERE=${0:A:h}; LIBS=$HERE/../libs; WORK=$(mktemp -d)
 cat > $WORK/all.m <<'M'
 #import <UIKit/UIKit.h>
 #import <MapboxCommon/MapboxCommon.h>
+#import <MapboxCommon/MapboxCommon-Swift.h>
 #import <MapboxCoreMaps/MapboxCoreMaps.h>
 #import <MapboxMaps/MapboxMaps.h>
 @interface MapView : UIView

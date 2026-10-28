@@ -5,7 +5,6 @@
 @protocol MBXOfflineSwitchObserver;
 
 /** Instance that allows connecting or disconnecting the Mapbox stack to the network. */
-NS_SWIFT_SENDABLE
 NS_SWIFT_NAME(OfflineSwitch)
 __attribute__((visibility ("default")))
 @interface MBXOfflineSwitch : NSObject

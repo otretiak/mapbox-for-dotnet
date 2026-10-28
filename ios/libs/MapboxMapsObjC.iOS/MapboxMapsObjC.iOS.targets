@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
 	<PropertyGroup>
-		<_MapboxMapsObjCVersion>11.33.0</_MapboxMapsObjCVersion>
+		<_MapboxMapsObjCVersion>11.27.3</_MapboxMapsObjCVersion>
 		<_MapboxMapsObjCNugetSuffix></_MapboxMapsObjCNugetSuffix>
 		<_MapboxMapsObjCAssemblyName>MapboxMapsObjC.iOS, Version=$(_MapboxMapsObjCVersion), Culture=neutral, PublicKeyToken=null </_MapboxMapsObjCAssemblyName>
 		<_MapboxMapsObjCItemsFolder>MapboxMapsObjC-$(_MapboxMapsObjCVersion)$(_MapboxMapsObjCNugetSuffix)</_MapboxMapsObjCItemsFolder>

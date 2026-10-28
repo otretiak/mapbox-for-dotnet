@@ -7,7 +7,6 @@
  * the number of resources that have completed downloading
  * and the total number of resources that are required.
  */
-NS_SWIFT_SENDABLE
 NS_SWIFT_NAME(StylePackLoadProgress)
 __attribute__((visibility ("default")))
 @interface MBMStylePackLoadProgress : NSObject

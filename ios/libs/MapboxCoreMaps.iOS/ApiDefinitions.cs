@@ -408,13 +408,13 @@ namespace MapboxCoreMaps
 	[DisableDefaultCtor]
 	interface MBMMapOptions
 	{
-		// -(nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode constrainMode:(nullable NSNumber *)constrainMode viewportMode:(nullable NSNumber *)viewportMode orientation:(nullable NSNumber *)orientation crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions size:(nullable MBMSize *)size glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions emissiveColorPrecision:(nullable NSNumber *)emissiveColorPrecision NS_REFINED_FOR_SWIFT;
-		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:glyphsRasterizationOptions:emissiveColorPrecision:")]
-		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions, [NullAllowed] NSNumber emissiveColorPrecision);
+		// -(nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode constrainMode:(nullable NSNumber *)constrainMode viewportMode:(nullable NSNumber *)viewportMode orientation:(nullable NSNumber *)orientation crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions size:(nullable MBMSize *)size glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions NS_REFINED_FOR_SWIFT;
+		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:glyphsRasterizationOptions:")]
+		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions);
 
-		// -(nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode constrainMode:(nullable NSNumber *)constrainMode viewportMode:(nullable NSNumber *)viewportMode orientation:(nullable NSNumber *)orientation crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions size:(nullable MBMSize *)size pixelRatio:(float)pixelRatio glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions scaleFactor:(float)scaleFactor emissiveColorPrecision:(nullable NSNumber *)emissiveColorPrecision NS_REFINED_FOR_SWIFT;
-		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:pixelRatio:glyphsRasterizationOptions:scaleFactor:emissiveColorPrecision:")]
-		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, float pixelRatio, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions, float scaleFactor, [NullAllowed] NSNumber emissiveColorPrecision);
+		// -(nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode constrainMode:(nullable NSNumber *)constrainMode viewportMode:(nullable NSNumber *)viewportMode orientation:(nullable NSNumber *)orientation crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions size:(nullable MBMSize *)size pixelRatio:(float)pixelRatio glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions scaleFactor:(float)scaleFactor NS_REFINED_FOR_SWIFT;
+		[Export ("initWithContextMode:constrainMode:viewportMode:orientation:crossSourceCollisions:size:pixelRatio:glyphsRasterizationOptions:scaleFactor:")]
+		NativeHandle Constructor ([NullAllowed] NSNumber contextMode, [NullAllowed] NSNumber constrainMode, [NullAllowed] NSNumber viewportMode, [NullAllowed] NSNumber orientation, [NullAllowed] NSNumber crossSourceCollisions, [NullAllowed] MBMSize size, float pixelRatio, [NullAllowed] MBMGlyphsRasterizationOptions glyphsRasterizationOptions, float scaleFactor);
 
 		// @property (readonly, nonatomic) NS_REFINED_FOR_SWIFT NSNumber * contextMode __attribute__((swift_private));
 		[Export ("contextMode")]
@@ -451,10 +451,6 @@ namespace MapboxCoreMaps
 		// @property (nonatomic, readonly) float scaleFactor NS_REFINED_FOR_SWIFT;
 		[Export ("scaleFactor")]
 		float ScaleFactor { get; }
-
-		// @property (nonatomic, readonly, nullable) NSNumber *emissiveColorPrecision NS_REFINED_FOR_SWIFT;
-		[NullAllowed, Export ("emissiveColorPrecision")]
-		NSNumber EmissiveColorPrecision { get; }
 	}
 
 	// @interface MBMCoordinateBoundsZoom : NSObject

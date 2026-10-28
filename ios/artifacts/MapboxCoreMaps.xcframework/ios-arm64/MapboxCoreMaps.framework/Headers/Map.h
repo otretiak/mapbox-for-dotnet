@@ -4,7 +4,6 @@
 #import "MBMConstrainMode.h"
 #import "MBMViewportMode.h"
 #import "MBMNorthOrientation.h"
-#import "MBMEmissiveColorPrecision.h"
 #import "MBMMapCenterAltitudeMode.h"
 #import "MBMMapDebugOptions.h"
 #import "MBMViewAnnotationAnchor.h"

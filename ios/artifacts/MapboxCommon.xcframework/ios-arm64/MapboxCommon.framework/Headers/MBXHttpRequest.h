@@ -78,8 +78,5 @@ __attribute__((visibility ("default")))
  */
 @property (nonatomic, readonly) uint32_t flags;
 
-/** The actual request ID that the request got. Filled by the SDK after the request has been started. */
-@property (nonatomic, readonly, nullable) NSNumber *id;
-
 
 @end

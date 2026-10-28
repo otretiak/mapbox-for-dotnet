@@ -178,7 +178,6 @@ namespace MapboxCommon
 		TilesetDescriptor,
 		DiskFull,
 		Other,
-		TileCountExceeded,
-		PartialLoad
+		TileCountExceeded
 	}
 }

@@ -6,7 +6,6 @@
 @class MBXHttpRequest;
 @class MBXHttpRequestError;
 @class MBXHttpResponseData;
-@class MBXHttpResponseStats;
 
 /** Record which is used to report HTTP response to the caller. */
 NS_SWIFT_NAME(HttpResponse)

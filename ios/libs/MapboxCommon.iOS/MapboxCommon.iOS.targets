@@ -3,7 +3,7 @@
 <Project>
 	<PropertyGroup>
 		<_MapboxDownloadToken>$(MAPBOX_DOWNLOADS_TOKEN)</_MapboxDownloadToken>
-		<_MapboxVersion>11.33.0</_MapboxVersion>
+		<_MapboxVersion>11.27.3</_MapboxVersion>
 		<_MapboxNugetSuffix></_MapboxNugetSuffix>
 		<_MapboxMapsItemsFolder>MapboxMaps-$(_MapboxVersion)$(_MapboxNugetSuffix)</_MapboxMapsItemsFolder>
 		<_MapboxMapsSDKBaseFolder>$(XamarinBuildDownloadDir)$(_MapboxMapsItemsFolder)\</_MapboxMapsSDKBaseFolder>
@@ -15,7 +15,7 @@
 		</XamarinBuildDownload>
 	</ItemGroup>
 	<PropertyGroup>
-		<_MapboxCommonAssemblyName>MapboxCommon.iOS, Version=24.33.0, Culture=neutral, PublicKeyToken=null </_MapboxCommonAssemblyName>
+		<_MapboxCommonAssemblyName>MapboxCommon.iOS, Version=24.27.3, Culture=neutral, PublicKeyToken=null </_MapboxCommonAssemblyName>
 	</PropertyGroup>
 	<ItemGroup Condition="('$(OutputType)'!='Library' OR '$(IsAppExtension)'=='True')">
 		<NativeReference Include="$(_MapboxMapsSDKBaseFolder)artifacts\MapboxCommon.xcframework">

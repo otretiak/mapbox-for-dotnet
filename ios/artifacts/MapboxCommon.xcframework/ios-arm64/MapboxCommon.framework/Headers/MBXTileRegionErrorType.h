@@ -17,9 +17,7 @@ typedef NS_ENUM(NSInteger, MBXTileRegionErrorType)
     /** Other reason. */
     MBXTileRegionErrorTypeOther,
     /** The region contains more tiles than allowed. */
-    MBXTileRegionErrorTypeTileCountExceeded,
-    /** Some of the tile region's resources failed to load; the tile region is usable but incomplete. */
-    MBXTileRegionErrorTypePartialLoad
+    MBXTileRegionErrorTypeTileCountExceeded
 } NS_SWIFT_NAME(TileRegionErrorType);
 
 NSString* MBXTileRegionErrorTypeToString(MBXTileRegionErrorType tile_region_error_type);

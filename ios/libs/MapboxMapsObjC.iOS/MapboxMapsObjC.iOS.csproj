@@ -10,7 +10,7 @@
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <_NativeVersion>11.33.0</_NativeVersion>
+    <_NativeVersion>11.27.3</_NativeVersion>
     <_NugetRevision>1</_NugetRevision>
     <_NugetSuffix>-unifly</_NugetSuffix>
     <_NugetVersion>$(_NativeVersion).$(_NugetRevision)$(_NugetSuffix)</_NugetVersion>
@@ -42,8 +42,8 @@
   <ItemGroup>
     <None Include="MapboxMapsObjC.iOS.targets" Pack="True" PackagePath="build/Bindings.Mapbox.iOS.MapsObjC.targets" />
     <None Include="MapboxMapsObjC.iOS.targets" Pack="True" PackagePath="buildTransitive/Bindings.Mapbox.iOS.MapsObjC.targets" />
-    <None Include="../../artifacts/MapboxMapsObjC-11.33.0.zip" Pack="True" PackagePath="build/MapboxMapsObjC-11.33.0.zip" />
-    <None Include="../../artifacts/MapboxMapsObjC-11.33.0.zip" Pack="True" PackagePath="buildTransitive/MapboxMapsObjC-11.33.0.zip" />
+    <None Include="../../artifacts/MapboxMapsObjC-11.27.3.zip" Pack="True" PackagePath="build/MapboxMapsObjC-11.27.3.zip" />
+    <None Include="../../artifacts/MapboxMapsObjC-11.27.3.zip" Pack="True" PackagePath="buildTransitive/MapboxMapsObjC-11.27.3.zip" />
     <None Include="../../source/External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
 		<None Include="../../assets/mapbox-dotnet.png" Pack="True" PackagePath="mapbox-dotnet.png" />
 		<None Include="../../LICENSE" Pack="True" PackagePath="" />

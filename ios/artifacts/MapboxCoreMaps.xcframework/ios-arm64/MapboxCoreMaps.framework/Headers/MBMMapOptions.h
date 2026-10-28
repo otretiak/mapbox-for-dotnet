@@ -6,7 +6,6 @@
 @class MBMSize;
 typedef NS_ENUM(NSInteger, MBMConstrainMode);
 typedef NS_ENUM(NSInteger, MBMContextMode);
-typedef NS_ENUM(NSInteger, MBMEmissiveColorPrecision);
 typedef NS_ENUM(NSInteger, MBMNorthOrientation);
 typedef NS_ENUM(NSInteger, MBMViewportMode);
 
@@ -27,8 +26,7 @@ __attribute__((visibility ("default")))
                                 orientation:(nullable NSNumber *)orientation
                       crossSourceCollisions:(nullable NSNumber *)crossSourceCollisions
                                        size:(nullable MBMSize *)size
-                 glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions
-                     emissiveColorPrecision:(nullable NSNumber *)emissiveColorPrecision NS_REFINED_FOR_SWIFT;
+                 glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions NS_REFINED_FOR_SWIFT;
 
 - (nonnull instancetype)initWithContextMode:(nullable NSNumber *)contextMode
                               constrainMode:(nullable NSNumber *)constrainMode
@@ -38,8 +36,7 @@ __attribute__((visibility ("default")))
                                        size:(nullable MBMSize *)size
                                  pixelRatio:(float)pixelRatio
                  glyphsRasterizationOptions:(nullable MBMGlyphsRasterizationOptions *)glyphsRasterizationOptions
-                                scaleFactor:(float)scaleFactor
-                     emissiveColorPrecision:(nullable NSNumber *)emissiveColorPrecision NS_REFINED_FOR_SWIFT;
+                                scaleFactor:(float)scaleFactor NS_REFINED_FOR_SWIFT;
 
 /**
  * The map context mode. This can be used to optimizations
@@ -88,12 +85,6 @@ __attribute__((visibility ("default")))
 
 /** Custom scale factor for the Map symbols: icons and texts. By default, it is set to 1.0 */
 @property (nonatomic, readonly) float scaleFactor NS_REFINED_FOR_SWIFT;
-
-/**
- * Controls how precisely emissive color is preserved when compositing draped layers (e.g. Raster, hillshade, background) over terrain or globe.
- * By default, it is set to 'Approximate'.
- */
-@property (nonatomic, readonly, nullable) NSNumber *emissiveColorPrecision NS_REFINED_FOR_SWIFT;
 
 
 @end
