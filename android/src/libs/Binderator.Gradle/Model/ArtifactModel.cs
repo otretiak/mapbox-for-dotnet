@@ -8,10 +8,12 @@ public class ArtifactModel : IEquatable<ArtifactModel>
     public string PackageProjectUrl => "https://github.com/matthewrdev/mapbox-for-dotnet";
     public string MaintainerDisplayName => "Matthew Robbins";
     public string MaintainerUrl => "https://www.nuget.org/profiles/matthewrobbins";
-    public IEnumerable<KeyValuePair<string, string>> ManualPackageReferences => Group?.Id == "com.mapbox.base"
-        && Nuget?.ArtifactId == "common"
-            ? [new("Xamarin.Kotlin.StdLib.Jdk7", "1.9.23.3")]
-            : [];
+    public IEnumerable<KeyValuePair<string, string>> ManualPackageReferences => (Group?.Id, Nuget?.ArtifactId) switch
+    {
+        ("com.mapbox.base", "common") => [new("Xamarin.Kotlin.StdLib.Jdk7", "1.9.23.3")],
+        ("com.mapbox.mapboxsdk", "mapbox-sdk-geojson") => [new("GoogleGson", "2.13.1.1")],
+        _ => []
+    };
     public string Name => string.IsNullOrWhiteSpace(Nuget.Name)
         ? Nuget.ArtifactId
         : Nuget.Name;

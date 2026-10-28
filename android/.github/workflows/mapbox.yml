@@ -8,7 +8,7 @@ on:
         required: true
         type: choice
         options:   
-        - com.mapbox.maps:android-ndk27:11.33.0
+        - com.mapbox.maps:android-ndk27:11.27.3
 
 jobs:
   build-then-publish:
