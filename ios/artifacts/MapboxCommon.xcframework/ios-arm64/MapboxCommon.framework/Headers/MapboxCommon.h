@@ -4,7 +4,6 @@
 #import <MapboxCommon/MBXFeature.h>
 #import <MapboxCommon/MBXGeometry.h>
 #import <MapboxCommon/MBXLocation+Additions.h>
-#import <MapboxCommon/MBXTileVariant.h>
 #import <MapboxCommon/MBXTilesetDescriptor.h>
 #import <MapboxCommon/MapboxCancelable.h>
 #import <MapboxCommon/MapboxHttp.h>

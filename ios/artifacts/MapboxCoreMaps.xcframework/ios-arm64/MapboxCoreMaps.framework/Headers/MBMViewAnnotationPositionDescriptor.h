@@ -38,6 +38,4 @@ __attribute__((visibility ("default")))
 @property (nonatomic, readonly, nonnull) MBMViewAnnotationAnchorConfig *anchorConfig;
 
 
-- (BOOL)isEqualToViewAnnotationPositionDescriptor:(nonnull MBMViewAnnotationPositionDescriptor *)other;
-
 @end

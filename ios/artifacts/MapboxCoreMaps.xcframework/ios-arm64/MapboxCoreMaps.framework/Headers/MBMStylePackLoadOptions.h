@@ -64,9 +64,6 @@ __attribute__((visibility ("default")))
  *   By default, the implementation removes the style package from the legacy storage after the first successful loadStylePack()
  *   call when all the data gets into the Tile Store.
  *   Setting this flag prevents from the style package removal from the legacy storage after the loadStylePack() call.
- *
- * - "network-restriction-disallow-expensive" -> boolean (false by default).
- *   Setting this flag restricts HTTP requests resulting from the loadStylePack() call to only non-metered networks such as WiFi.
  */
 @property (nonatomic, readonly, nullable, copy) id extraOptions;
 

@@ -166,8 +166,7 @@ namespace MapboxCommon
 		Navigation,
 		Search,
 		Adas,
-        NavigationHD,
-        EvChargingStations,
+		NavigationHD
 	}
 
 	[Native]

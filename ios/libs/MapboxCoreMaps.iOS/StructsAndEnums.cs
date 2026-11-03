@@ -88,8 +88,7 @@ namespace MapboxCoreMaps
 		TerrainWireframe,
 		Layers2DWireframe,
 		Layers3DWireframe,
-		Light,
-		ElevationID
+		Light
 	}
 
 	[Native]

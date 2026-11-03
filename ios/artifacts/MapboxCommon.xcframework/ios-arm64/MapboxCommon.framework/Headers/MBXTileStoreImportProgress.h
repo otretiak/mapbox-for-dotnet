@@ -2,8 +2,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class MBXTileVariant;
-
 /** Describes the progress of a tile store import operation. */
 NS_SWIFT_NAME(TileStoreImportProgress)
 __attribute__((visibility ("default")))
@@ -21,8 +19,7 @@ __attribute__((visibility ("default")))
                     importedResourceCount:(uint64_t)importedResourceCount
                      importedResourceSize:(uint64_t)importedResourceSize
                     requiredResourceCount:(uint64_t)requiredResourceCount
-                    requiredResourceBytes:(uint64_t)requiredResourceBytes
-             maximumCoveredDistanceMeters:(nonnull NSDictionary<MBXTileVariant *, NSNumber *> *)maximumCoveredDistanceMeters;
+                    requiredResourceBytes:(uint64_t)requiredResourceBytes;
 
 /** Get progression rate in bytes processed per second. */
 - (double)getProgressRate;
@@ -47,17 +44,6 @@ __attribute__((visibility ("default")))
 
 /** The total number of bytes in the archive. */
 @property (nonatomic, readonly) uint64_t requiredResourceBytes;
-
-/**
- * The maximum distance in meters (as a circular radius) from the specified start location that is covered by each
- * tile variant. Populated only when a start location is provided; otherwise empty.
- *
- * If any tiles are excluded by filtering, they are counted towards the maximum covered distance meters.
- *
- * Note: approximations are used to calculate distances, so the actual covered area may be slightly larger than
- * reported.
- */
-@property (nonatomic, readonly, nonnull, copy) NSDictionary<MBXTileVariant *, NSNumber *> *maximumCoveredDistanceMeters;
 
 
 @end
